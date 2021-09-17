@@ -1,38 +1,150 @@
-.App {
-  text-align: center;
-}
+/* DESKTOP ONLY */
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* START COMPONENT */
+.App,
+.tictoctoe {
+  background-color: #545f7d;
+  color: #c4c4c4;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  min-width: 370px;
+  width: 100%;
+  padding: 0px 20px;
+  height: 1000px;
 }
 
-.App-link {
-  color: #61dafb;
+.start__btn {
+  justify-content: space-between;
+  margin-bottom: 50px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.start_btn_player {
+  margin: 20px;
+  padding: 10px 30px;
+  font-size: 26px;
+  font-weight: 700;
+  background-color: #c4c4c4;
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease 0s;
+}
+
+.start_btn_player:hover {
+  box-shadow: 0px 15px 20px #c4c4c4;
+  transform: translateY(-7px);
+}
+
+.start_btn_player:first-child {
+  color: #a855c1;
+  border-color: #a855c1;
+}
+
+.start_btn_player:last-child {
+  color: #44425f;
+  border-color: #44425f;
+}
+
+.start_btn_back {
+  font-size: 32px;
+  font-weight: 700;
+  text-transform: uppercase;
+  text-align: inherit;
+  padding: 5px 30px;
+  background-color: transparent;
+  color: #c4c4c4;
+  border: 0px transparent;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease 0s;
+}
+
+.start_btn_back:hover {
+  transform: translateY(-7px);
+  box-shadow: 0 4px 2px -2px #c4c4c4;
+}
+
+h1 {
+  text-transform: uppercase;
+  font-size: 50px;
+}
+
+h3 {
+  font-size: 36px;
+  letter-spacing: 3px;
+  margin: 0px;
+}
+
+/* TICTACTOE COMPONENT */
+.tictoctoe_tex_box {
+  padding-left: 20px;
+}
+
+.tictoctoe_turn {
+  font-weight: 700;
+  font-size: 70px;
+  margin: 0px 5px;
+}
+
+/* BOARD */
+.table__box {
+  width: 100%;
+  min-width: 300px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.table {
+  display: flex;
+  flex-wrap: wrap;
+  width: 600px;
+  height: 600px;
+  background-color: #a855c1;
+  justify-content: space-between;
+  margin: 30px 20px;
+  position: relative;
+}
+
+.cells {
+  width: 30%;
+  height: 30%;
+  background-color: #44425f;
+  color: #c4c4c4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 100px;
+  margin-bottom: auto;
+  margin-top: auto;
+}
+
+.item {
+  margin: 0px;
+  height: 100%;
+  font-size: 150px;
+}
+
+.red_line {
+  position: absolute;
+  background-color: red;
+  height: 75%;
+  width: 20px;
+  display: none;
+}
+
+/* SCORE */
+.tictoctoe_box {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.table__box {
+  flex: 65%;
+}
+
+.score {
+  flex: 35%;
 }
